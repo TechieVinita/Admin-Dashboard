@@ -1,5 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+:root{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+
+    --sky-blue-color: #0284c7;
+    --white-color: #fff;
+    --gray-color: #d4d4d4;
+    --dark-gray-color: #6b7280;
+}
+
+.container{
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+.sidebar{
+    grid-row: 1 / 3;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    opacity: 0.88;
+    color: var(--white-color);
+    background-color: var(--sky-blue-color);
+
+    padding: 1.3rem;
+}
+
+.dashboard{
+    display: flex;
+    align-items: center;
+
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.dashboard svg{
+    width: 2rem;
+    height: 2rem;
+    fill: var(--white-color);
+
+    margin-right: 5px;
+}
+
+.menu li{
+    list-style-type: none;
+
+    display: flex;
+    gap: 0.5rem;
+    justify-content: start;
+    align-items: center;
+
+    font-size: 1.3rem;
+    font-weight: 500;
+
+    margin-bottom: 1rem;
+}
+
+.menu li svg{
+    width: 23px;
+    height: 23px;
+    fill: var(--white-color);
+
+    margin-right: 5px;
+}
+
+.header{
+    grid-column: 2;
+
+    padding: 10px;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+input[type="search"]{
+    border-radius: 20px;
+    border: 1px solid transparent;
+    background-color: var(--gray-color);
+
+    width: 450px;
+    height: 30px;
+}
+
+.right{
+    display: flex;
+    gap: 15px;
+}
+
+.user-intro{
+    display: flex;
+}
+
+.user-msg{
+    font-size: 1rem;
+}
+
+.big-user-name{
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.btn{
+    color: white;
+    border-radius: 55px;
+    border: 0px solid transparent;
+    background-color: var(--sky-blue-color);
+
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 15px;
+    margin: 0 8px;
+}
+
+.main{
+    padding: 1rem;
+
+    box-shadow: inset 0px 0px 8px var(--gray-color);
+    background-color: rgb(243, 243, 243);
+    grid-column: 2;
+
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.project-section{
+    grid-row: 1 / 3;
+    grid-column: 1 / 3;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.announcements-section > h3,
+.trending-section > h3,
+.project-section > h3 {
+    height: 50px;
+}
+
+.project-section .card{
+    background-color: var(--white-color);
+    box-shadow: 2px 2px 3px var(--gray-color);
+
+    width: 400px;
+
+    padding: 1rem;
+    margin-bottom: 25px;
+    margin-right: 25px;
+
+    border-radius: 5px;
+    border-left: 7px solid orange;
+
+    position: relative;
+}
+
+.announcements-section .card h4,
+.project-section .card h3{
+    margin-bottom: 10px;
+
+}
+
+.project-section .card p{
+    color: var(--dark-gray-color);
+
+    margin-bottom: 40px;
+}
+
+.project-section h3{
+    grid-column: 1 /-1;
+
+}
+
+.icons{
+    display: flex;
+    justify-content: end;
+
+    gap: 15px;
+}
+
+.project-section .card > .icons{    
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+}
+
+.icons svg{
+    width: 1.2rem;
+    height: 1.2rem;
+    fill: black;
+}
+
+.announcements-section{
+    grid-column: -2 / -1;
+}
+
+.announcements-section .cards,
+.trending-section .cards{
+    background-color: var(--white-color);
+    box-shadow: 2px 2px 3px var(--gray-color);
+
+    width: 400px;
+
+    padding: 1rem;
+
+    margin-bottom: 25px;
+
+    border-radius: 5px;
+}
+
+.announcements-section .card p{
+    margin-bottom: 20px;
+}
+
+.announcements-section .card{
+    border-bottom: 1px solid var(--gray-color);
+
+    margin: 20px 0;
+}
+
+.announcements-section .card:nth-child(3){
+    border: none;
+}
+
+.trending-section{
+    grid-column: -2 / -1;
+}
+
+.trending-section .card{
+    margin: 10px 0;
+}
+
+.trending-section .card .project-name{
+    margin-top: 5px;;
+    color: var(--dark-gray-color);
+}
+
+svg, li, button{
+    cursor: pointer;
+}
+
+
+
